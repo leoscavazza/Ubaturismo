@@ -13,6 +13,7 @@ body {
   position: fixed;
   width: 100%;
   background-color: #020e4b;
+  z-index: 1000;
 }
 
 .header .container {
@@ -58,7 +59,7 @@ body {
 
 /* CARDS DE SERVIÇOS DO SITE */
 
-.servico {
+.container_servico {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,11 +68,12 @@ body {
   height: 700px;
 }
 
-.servico h1 {
+.container_servico h1 {
   color: #fff;
   font-family: "Cabin", sans-serif;
   font-size: 40px;
   margin-bottom: 60px;
+  font-weight: 800;
 }
 
 .card_servico {
@@ -114,10 +116,60 @@ body {
   text-align: center;
 }
 
+.card_conteudo h3 {
+  font-weight: 800;
+}
+
 .card_conteudo p {
   margin-top: 0px;
   margin: 0px 10px;
+  font-weight: 500;
 }
+
+/* NOSSO IMPACTO NO MEIO AMBIENTAL */
+.container_ambiental {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.container_ambiental .titulo {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.container_ambiental .titulo h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #083b14;
+  font-weight: 800;
+}
+
+.container_ambiental .titulo p {
+  font-weight: 500;
+}
+
+.card_ambiental {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#vida_agua {
+  background-color: #020e4b;
+  color: #f7f5f5;
+  height: 440px;
+}
+
+#vida_terrestre {
+  background-color: #083b14;
+  color: #f7f5f5;
+  height: 440px;
+}
+
+/* CONTAINER PARA O CADASTRO */
 
 /* FOOTER */
 
