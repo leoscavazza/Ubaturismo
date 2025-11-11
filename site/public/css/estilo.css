@@ -132,12 +132,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 600px;
+  background-image: url('../assets/imgs/banner_complemento_cadastro.png');
+  background-size: cover;
 }
 
 .container_ambiental .titulo {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  margin-bottom: 120px;
 }
 
 .container_ambiental .titulo h1 {
@@ -155,21 +158,73 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 120px;
 }
 
 #vida_agua {
   background-color: #020e4b;
   color: #f7f5f5;
-  height: 440px;
+  height: 420px;
 }
 
 #vida_terrestre {
   background-color: #083b14;
   color: #f7f5f5;
-  height: 440px;
+  height: 420px;
 }
 
 /* CONTAINER PARA O CADASTRO */
+.container_cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-image: url('../assets/imgs/banner_cadastro.png');
+  background-size: cover;
+}
+
+.box_informacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box_informacao h1 {
+  font-size: 60px;
+  margin-bottom: 0px;
+  color: #f7f5f5;
+  font-weight: 800;
+}
+
+.box_informacao p {
+  font-size: 30px;
+  color: #f7f5f5;
+  font-weight: 500;
+}
+
+.box_informacao a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #083b14;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #f7f5f5;
+  background-color: #020e4b;
+  padding: 10px;
+  width: 140px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.box_informacao a:hover {
+  border: 2px solid #020e4b;
+  background-color: transparent;
+  margin: 0px;
+  transition: 0.2s ease;
+}
 
 /* FOOTER */
 
