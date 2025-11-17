@@ -1,0 +1,11 @@
+SHOW DATABASES;
+
+USE ubaturismo;
+
+CREATE TABLE usuario (
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(255) NOT NULL,
+idade INT,
+email VARCHAR(255),
+senha VARCHAR(100)
+);
