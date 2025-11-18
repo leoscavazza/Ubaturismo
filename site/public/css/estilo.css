@@ -44,8 +44,6 @@ body {
   list-style: none;
 }
 
-/* BANNER HOME */
-
 .banner_home {
   display: flex;
 }
@@ -57,8 +55,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
-/* CARDS DE SERVIÇOS DO SITE */
 
 .container_servico {
   display: flex;
@@ -127,7 +123,6 @@ body {
   font-weight: 500;
 }
 
-/* NOSSO IMPACTO NO MEIO AMBIENTAL */
 .container_ambiental {
   display: flex;
   justify-content: center;
@@ -174,7 +169,6 @@ body {
   height: 420px;
 }
 
-/* CONTAINER PARA O CADASTRO */
 .container_cadastro {
   display: flex;
   justify-content: center;
@@ -226,8 +220,6 @@ body {
   background-color: transparent;
   margin: 0px;
 }
-
-/* FOOTER */
 
 .footer {
   background-color: #f7f5f5;

@@ -1,11 +1,41 @@
-/* SIMULADOR */
-
-.simulador {
-  color: white;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
 }
 
-.simulador .container {
-  flex-direction: column;
-  overflow: scroll; 
-  height: var(--tamanho-simulador);
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #020e4b;
+  z-index: 1000;
 }
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 50px;
+}
+
+.header img {
+  width: 100px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header li {
+  color: #fff;
+}
+
+.navbar {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
