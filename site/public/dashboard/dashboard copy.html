@@ -8,11 +8,11 @@
 
     <title>Ubaturismo - Página Inicial</title>
 
-    <script src="./js/sessao.js"></script>
-
     <link rel="stylesheet" href="../css/dashboard copy.css">
     <link rel="icon" href="./assets/icon/logo_ubaturismo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <script src="../js/dashboard copy.js"></script>
 </head>
@@ -20,15 +20,46 @@
 <!-- <body onload=" atualizarFeed()"> -->
 
 <body>
-    <div id="container_principal">
-        <div id="header">
+    <div class="container_principal">
+        <div class="header">
             <img src="../assets/icon/logo_ubaturismo.png" alt="Logo Ubaturismo">
             <a href="../index.html">Home</a>
             <a href="../cadastro.html">Cadastro</a>
-            <a href="../login.html">Login</a>
+            <a class="a_login" href="../login.html">Login</a>
         </div>
-        <div id="conteudo">
-
+        <div class="conteudo">
+            <div class="container_kpi">
+                <div class="kpi">
+                    <h2>Faixa etária mais cadastrada</h2>
+                    <h3>20 anos - 40 anos </h3>
+                </div>
+                <div class="kpi">
+                    <h2>Praia de maior interesse</h2>
+                    <h3>Praia do Félix</h3>
+                </div>
+                <div class="kpi">
+                    <h2>Evento de maior interesse</h2>
+                    <h3>Balada ao Mar</h3>
+                </div>
+                <div class="kpi">
+                    <h2>hobbie mais comum</h2>
+                    <h3>Passear com a família</h3>
+                </div>
+            </div>
+            <div class="container_grafico">
+                <div class="container_grafico_praia">
+                    <h3>Gráfico interesse de praias</h3>
+                    <div class="grafico_praia">
+                        <canvas id="myChartCanvasPraia"></canvas>
+                    </div>
+                </div>
+                <div class="container_grafico_evento">
+                    <h3>Gráfico interesse de eventos</h3>
+                    <div class="grafico_evento">
+                        <canvas id="myChartCanvasEvento"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
