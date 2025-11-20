@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/simulador.css">
     <link rel="icon" href="./assets/icon/favicon2.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <script src="./js/simulador.js"></script>
 </head>
 
 <body>
@@ -71,7 +73,8 @@
                     simulador,
                     em seguida insira a localização de sua casa como local de partida, após inserir a localização,
                     verifique a distância
-                    em kilometros informada na primeira rota, assim como na imagem.</p>
+                    em quilômetros informada na primeira rota, assim como na imagem.
+                </p>
             </div>
             <img src="assets/imgs/exemplo_kilometragem.png" alt="exemplo de kilometragem">
         </div>
@@ -79,40 +82,41 @@
             <div class="texto_passos">
                 <h1>2º Passo:</h1>
                 <p>
-                    Após concluir o primeiro passo, insira na primeira entrada do simulador a distância em kilometros,
-                    assim como na imagem.</p>
+                    Após concluir o primeiro passo, insira na primeira entrada do simulador a distância em quilômetros,
+                    assim como na imagem.
+                </p>
             </div>
-            <img src="assets/imgs/exemplo_kilometragem.png" alt="exemplo de kilometragem">
+            <img src="assets/imgs/segundo_passo.png" alt="exemplo de kilometragem">
         </div>
         <div class="passos">
             <div class="texto_passos">
                 <h1>3º Passo:</h1>
                 <p>
-                    Após concluir o segundo passo, selecione na segunda entrada, se você gostaria de viajar de carro ou
-                    de avião, assim como na imagem.</p>
+                    Após concluir o segundo passo, insira na segunda entrada o consumo médio de gasolina do seu veículo em quilômetros por litros. 
+                    Caso não saiba seu consumo, simule com 12 km/l, pois essa é uma média geral.
+                </p>
             </div>
-            <img src="assets/imgs/exemplo_kilometragem.png" alt="exemplo de kilometragem">
+            <img src="assets/imgs/terceiro_passo.png" alt="exemplo de kilometragem">
         </div>
-
         <div class="passos">
             <div class="texto_passos">
                 <h1>4º Passo:</h1>
                 <p>
-                    Após concluir o terceiro passo, caso você tenha escolhido carro, selecione na terceira entrada a
-                    categoria do seu carro, se você escolheu avião, selecione a classe da viagem, assim como na imagem
-                    (Exemplo: carro).</p>
+                    Após concluir o terceiro passo, clique no botão simular assim como na imagem e acompanhe o resultado
+                    da simulação, com a distância total, duração da viagem e gasto total com gasolina.
+                </p>
             </div>
-            <img src="assets/imgs/exemplo_kilometragem.png" alt="exemplo de kilometragem">
+            <img src="assets/imgs/quarto_passo.png" alt="exemplo de kilometragem">
         </div>
-
         <div class="passos">
             <div class="texto_passos">
                 <h1>5º Passo:</h1>
                 <p>
-                    Após concluir o quarto passo, clique no botão simular e desça um pouco a tela para ver o resultado
-                    da simulação, assim como na imagem.</p>
+                    Após concluir o quarto passo, Responda também nosso questionário logo abaixo, para nos ajudar a lhe
+                    fornecer a melhor expêriencia possivel!
+                </p>
             </div>
-            <img src="assets/imgs/exemplo_kilometragem.png" alt="exemplo de kilometragem">
+            <img src="assets/imgs/quinto_passo.png" alt="exemplo de kilometragem">
         </div>
     </div>
 
@@ -120,20 +124,54 @@
         <div class="texto_simulador">
             <h1>Simulador de Viagem para Ubatuba</h1>
             <p>
-                Aqui você consegue acompanhar o tempo que levaria para você<br> chegar em Ubatuba e até possíveis
-                gastos!<br>
-                Não perca tempo, faça já sua simulação!
+                Siga o passo a passo acima para poder simular sua viagem á Ubatuba.<br>
+                Simule já!
             </p>
         </div>
         <div class="simulador">
-            Insira a distância em kilometros(km) de sua casa até Ubatuba: (Link para coletar a distância:
-            <a href="https://www.google.com/maps/dir//Ubatuba,+SP/@-23.3143278,-47.1817137,8z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94cd5228bab1966d:0x9905169ef1825576!2m2!1d-45.0849154!2d-23.4345298?entry=ttu&g_ep=EgoyMDI1MTExNi4wIKXMDSoASAFQAw%3D%3D">
-                Link para o Google Maps
-            </a>)<br>
-            <input id="ipt_distancia"><br>
+            <div id="card_simulador">
+                <h1>Simulador</h1>
+                <p class="paragrafo_distancia">
+                    Insira a distância em quilômetros de sua casa até Ubatuba:
+                    <br>
+                    (Link para coletar a distância:
+                    <a href="https://www.google.com/maps/dir//Ubatuba,+SP/@-23.3143278,-47.1817137,8z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94cd5228bab1966d:0x9905169ef1825576!2m2!1d-45.0849154!2d-23.4345298?entry=ttu&g_ep=EgoyMDI1MTExNi4wIKXMDSoASAFQAw%3D%3D"
+                        style="color: cornflowerblue;">
+                        Link para o Google Maps
+                    </a>)
+                </p>
+                <br>
+                <input id="ipt_distancia" placeholder="Distância em quilômetros (km)"><br>
+                <p>
+                    Insira o consumo médio de gasolina do seu veículo (Em km/l):
+                    <br>
+                    (Caso não saiba seu consumo, simule com 12 km/l)
+                </p>
+                <br>
+                <input id="ipt_consumo" placeholder="Consumo médio em (km/l)"><br>
 
-            Insira a
+
+                <button onclick="simular()">Simular</button>
+            </div>
         </div>
+    </div>
+
+    <div class="container_questionario">
+        <h1>Questionário</h1>
+
+        <h2>Este questionário visa apenas melhorar a experiência do usuario!</h2>
+
+        <p>Caso você visitasse Ubatuba, qual praia você mais teria interesse em ir?</p>
+        <select id="select_praia">
+
+        </select>
+
+        <p>Caso você visitasse Ubatuba, qual evento você mais teria interesse em ir?</p>
+        <select id="select_evento">
+
+        </select>
+
+        <button onclick="questionario()">Enviar</button>
     </div>
 </body>
 
