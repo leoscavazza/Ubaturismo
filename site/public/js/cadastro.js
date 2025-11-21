@@ -151,7 +151,7 @@ function cadastrar() {
 
     // Validando o cadastro
     if (nomeCorreto == false || idadeCorreta == false || emailCorreto == false || senhaCorreta == false || confirmarCorreto == false) {
-        alert("Preencha os campos corretamente.")
+        alert("Preencha os campos corretamente.");   
     } else {
         fetch("/usuarios/cadastrar", {
             method: "POST",

@@ -32,7 +32,7 @@ function simular() {
                 <p>Duração aproximada da viagem: ${tempo} Horas</p>
             </div>
             <div id="ultima_linha" class="linha_resultado">
-                <p>Gasto total com gasolina: ${preco.toLocaleString('pt-BR',{ style: 'currency', currency: 'BRL' })}</p>
+                <p>Gasto total com gasolina: ${preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                 <button onclick="simular_novamente()">Simular novamente</button>
             </div>
             <div class="paragrafo_responda_questionario">
@@ -67,4 +67,30 @@ function simular_novamente() {
         <input id="ipt_consumo" placeholder="Consumo médio em (km/l)"><br>
 
         <button onclick="simular()">Simular</button>`
+}
+
+var contador_questionario = false;
+
+function questionario() {
+    var praia = select_praia.value;
+    var segunda_praia = select_segunda_praia.value;
+    var terceira_praia = select_terceira_praia.value;
+    var evento = select_evento.value;
+
+    if (contador_questionario == true) {
+        alert("O questionário pode ser realizado apenas uma vez.")
+    } else {
+        if (praia == "#") {
+            alert("Selecione uma das praias.");
+        } else if (segunda_praia == "#") {
+           alert("Selecione uma das praias.") 
+        } else if (terceira_praia == "#") {
+           alert("Selecione uma das praias.") 
+        } else if (evento == "#") {
+            alert("Selecione um dos eventos.");
+        } else {
+            alert("Sua resposta foi registrada. Obrigado pela participação!")
+            contador_questionario = true;
+        }
+    }
 }

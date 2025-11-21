@@ -31,10 +31,13 @@ function entrar() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
-                sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                 setTimeout(function () {
-                    window.location = "./dashboard/cards.html";
+                    if (emailVar == 'leo@gmail.com'){
+                        window.location = "./dashboard/dashboard copy.html";
+                    } else {
+                        window.location = "../home.html";
+                    }
                 }, 1000); // apenas para exibir o loading
 
             });
