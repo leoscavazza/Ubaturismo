@@ -76,6 +76,7 @@ function cadastrar() {
     var segunda_praia = select_segunda_praia.value;
     var terceira_praia = select_terceira_praia.value;
     var evento = select_evento.value;
+    var hobbie = select_hobbie.value;
     var usuarioId = localStorage.ID_USUARIO;
 
     if (contador_questionario == true) {
@@ -89,6 +90,8 @@ function cadastrar() {
             alert("Selecione uma das praias.")
         } else if (evento == "#") {
             alert("Selecione um dos eventos.");
+        } else if (hobbie == "#"){
+            alert("Selecione um dos hobbies.");
         } else {
             if (praia == "estaleiro") {
                 praia = 1;
@@ -128,9 +131,17 @@ function cadastrar() {
                 evento = 3;
             } else if (evento == "balada") {
                 evento = 4;
-            }
+            } if (hobbie == "caminhada") {
+                hobbie = 1;
+            } else if (hobbie == "sorvete") {
+                hobbie = 2;
+            } else if (hobbie == "passeio") {
+                hobbie = 3;
+            } else if (hobbie == "futevolei") {
+                hobbie = 4;
+            } 
             
-            console.log(`console simulador ${praia}, ${segunda_praia}, ${terceira_praia}, ${evento}, ${usuarioId}`);
+            console.log(`console simulador ${praia}, ${segunda_praia}, ${terceira_praia}, ${evento}, ${hobbie}, ${usuarioId}`);
 
             alert("Sua resposta foi registrada. Obrigado pela participação!")
             contador_questionario = true;
@@ -145,6 +156,7 @@ function cadastrar() {
                     segundaPraiaServer: segunda_praia,
                     terceiraPraiaServer: terceira_praia,
                     eventoServer: evento,
+                    hobbieServer: hobbie,
                     idServer: usuarioId
                 }),
                 

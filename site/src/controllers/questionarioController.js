@@ -5,6 +5,7 @@ function cadastrar(req, res) {
     var segunda_praia = req.body.segundaPraiaServer;
     var terceira_praia = req.body.terceiraPraiaServer;
     var evento = req.body.eventoServer;
+    var hobbie = req.body.hobbieServer;
     var usuarioId = req.body.idServer;
 
     if (praia == undefined) {
@@ -15,11 +16,13 @@ function cadastrar(req, res) {
         res.status(400).send("A terceira praia está undefined!");
     } else if (evento == undefined) {
         res.status(400).send("O evento está undefined!");
-    } else if (usuarioId == undefined) {
+    } else if (hobbie == undefined) {
+        res.status(400).send("O hobbie está undefined!");
+    }else if (usuarioId == undefined) {
         res.status(400).send("O id está undefined!");
     }
 
-    questionarioModel.cadastrar(praia, segunda_praia, terceira_praia, evento, usuarioId)
+    questionarioModel.cadastrar(praia, segunda_praia, terceira_praia, evento, hobbie, usuarioId)
             .then(
                 function (resultado) {
                     res.json(resultado);

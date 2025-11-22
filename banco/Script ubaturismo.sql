@@ -8,6 +8,12 @@ CREATE TABLE evento (
  descricao VARCHAR(255)
 );
 
+CREATE TABLE hobbie (
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ nome VARCHAR(30),
+ descricao VARCHAR(255)
+);
+
 CREATE TABLE usuario (
 id INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(255),
@@ -16,9 +22,13 @@ email VARCHAR(255),
 senha VARCHAR(100),
 administrador INT,
 fkEvento INT,
+fkHobbie INT,
 CONSTRAINT fk_evento_usuario 
 	FOREIGN KEY (fkEvento)
-		REFERENCES evento(id)
+		REFERENCES evento(id),
+CONSTRAINT fk_hobbie_usuario
+	FOREIGN KEY (fkHobbie)
+		REFERENCES hobbie(id)
 );
 
 ALTER TABLE usuario ADD CONSTRAINT fk_usuario_administrador
@@ -46,7 +56,7 @@ CONSTRAINT fk_praia_usuario
 
 SELECT * FROM evento;
 
-SELECT * FROM usuario;
+SELECT * FROM usuario;	
 
 SELECT * FROM praia;
 
@@ -64,9 +74,19 @@ INSERT INTO evento VALUES
 (2, 'Visita ao Aquário de Ubatuba', 'É um centro de lazer educativo que mostra a biodiversidade marinha, com várias espécies de animais, incluindo peixes, tubarões, arraias, pinguins, cavalos-marinhos, águas-vivas e tartarugas'),
 (3, 'Passeio na feirinha do Centro de Ubatuba', 'A Feirinha de Artesanato de Ubatuba, localizada na orla do Itaguá, é um espaço que oferece uma variedade de produtos locais, como artesanato, roupas, biquínis, óculos, artigos místicos e brinquedos'),
 (4, 'Balada no Cafe de La Musique', 'É um beach club com alta gastronomia, drinks, música e um ambiente de celebração');
-
-SELECT usuario_praia.idUsuario, usuario_praia.idPraia, usuario.fkEvento 
-	FROM usuario_praia JOIN usuario
-		ON usuario_praia.idUsuario = usuario.id
-	WHERE usuario_praia.idUsuario = 1;
     
+INSERT INTO hobbie VALUES 
+(1, 'Caminhada na praia', 'Caminhada nas praias de ubatuba, é muito comum, específicamente em praias com faixas de areias mais extensas'),
+(2, 'Tomar sorvete no passeio', 'Tomar sorvete no passeio, geralmente é mais comum á noite, quando as pessoas vão ao centro para passear'),
+(3, 'Passear na feirinha', 'Passear na feirinha, geralmente ocorre a noite, pois as feirinhas só abrem a noite, onde as pessoas saem para passear'),
+(4, 'Jogar vôlei ou futevôlei', 'Jogar vôlei ou futevôlei, é muito comum em praias de ubatuba, onde muitas praias possuem quadras de areia para este tipo de atividade');
+
+SELECT 
+	usuario_praia.idUsuario,
+    usuario_praia.idPraia,
+    usuario.fkEvento,
+    usuario.fkHobbie
+FROM usuario_praia 
+JOIN usuario
+	ON usuario.id = usuario_praia.idUsuario
+ORDER BY usuario_praia.idUsuario ASC;
