@@ -1,22 +1,18 @@
 var database = require("../database/config");
 
-function listar() {
+function cadastrar(praia, segunda_praia, terceira_praia, evento, usuarioId) {
     var instrucao = `
-        SELECT * FROM carro;
+        INSERT INTO usuario_praia (idUsuario, idPraia) VALUES (${usuarioId}, ${praia}), (${usuarioId}, ${segunda_praia}), (${usuarioId}, ${terceira_praia});
     `;
-    console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
-}
+    var segundaInstrucao = `
+        UPDATE usuario SET fkEvento = ${evento} WHERE id = ${usuarioId};
+    `;
 
-function cadastrar(praia, segunda_praia, terceira_praia, evento) {
-    var instrucao = `
-        INSERT INTO usuario_praia (idUsuario, idPraia) VALUES ('${idUsuario}', '${praia}'), ('${idUsuario}', '${segunda_praia}'), ('${idUsuario}', '${terceira_praia}');
-    `;
     console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
+    database.executar(instrucao);
+    return database.executar(segundaInstrucao);
 }
 
 module.exports = {
-    cadastrar,
-    listar
+    cadastrar
 };

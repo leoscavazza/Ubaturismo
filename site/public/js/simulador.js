@@ -71,11 +71,12 @@ function simular_novamente() {
 
 var contador_questionario = false;
 
-function questionario() {
+function cadastrar() {
     var praia = select_praia.value;
     var segunda_praia = select_segunda_praia.value;
     var terceira_praia = select_terceira_praia.value;
     var evento = select_evento.value;
+    var usuarioId = localStorage.ID_USUARIO;
 
     if (contador_questionario == true) {
         alert("O questionário pode ser realizado apenas uma vez.")
@@ -83,14 +84,73 @@ function questionario() {
         if (praia == "#") {
             alert("Selecione uma das praias.");
         } else if (segunda_praia == "#") {
-           alert("Selecione uma das praias.") 
+            alert("Selecione uma das praias.")
         } else if (terceira_praia == "#") {
-           alert("Selecione uma das praias.") 
+            alert("Selecione uma das praias.")
         } else if (evento == "#") {
             alert("Selecione um dos eventos.");
         } else {
+            if (praia == "estaleiro") {
+                praia = 1;
+            } else if (praia == "maranduba") {
+                praia = 2;
+            } else if (praia == "fortaleza") {
+                praia = 3;
+            } else if (praia == "felix") {
+                praia = 4;
+            } else if (praia == "pereque") {
+                praia = 5;
+            } if (segunda_praia == "estaleiro") {
+                segunda_praia = 1;
+            } else if (segunda_praia == "maranduba") {
+                segunda_praia = 2;
+            } else if (segunda_praia == "fortaleza") {
+                segunda_praia = 3;
+            } else if (segunda_praia == "felix") {
+                segunda_praia = 4;
+            } else if (segunda_praia == "pereque") {
+                segunda_praia = 5;
+            } if (terceira_praia == "estaleiro") {
+                terceira_praia = 1;
+            } else if (terceira_praia == "maranduba") {
+                terceira_praia = 2;
+            } else if (terceira_praia == "fortaleza") {
+                terceira_praia = 3;
+            } else if (terceira_praia == "felix") {
+                terceira_praia = 4;
+            } else if (terceira_praia == "pereque") {
+                terceira_praia = 5;
+            } if (evento == "festival") {
+                evento = 1;
+            } else if (evento == "aquario") {
+                evento = 2;
+            } else if (evento == "passeio") {
+                evento = 3;
+            } else if (evento == "balada") {
+                evento = 4;
+            }
+            
+            console.log(`console simulador ${praia}, ${segunda_praia}, ${terceira_praia}, ${evento}, ${usuarioId}`);
+
             alert("Sua resposta foi registrada. Obrigado pela participação!")
             contador_questionario = true;
+
+            fetch("/questionario/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    praiaServer: praia,
+                    segundaPraiaServer: segunda_praia,
+                    terceiraPraiaServer: terceira_praia,
+                    eventoServer: evento,
+                    idServer: usuarioId
+                }),
+                
+            })
+                
+            return false;
         }
     }
-}
+} 

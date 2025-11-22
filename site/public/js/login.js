@@ -1,6 +1,7 @@
 function entrar() {
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
+    
 
     if (emailVar == "" || senhaVar == "") {
         alert("Preencha todos os campos.");
@@ -28,10 +29,10 @@ function entrar() {
             resposta.json().then(json => {
                 console.log(json);
                 console.log(JSON.stringify(json));
-                sessionStorage.EMAIL_USUARIO = json.email;
-                sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.id;
-
+                sessionStorage.EMAIL_USUARIO = json[0].email;
+                sessionStorage.NOME_USUARIO = json[0].nome;
+                localStorage.ID_USUARIO = json[0].id;
+                
                 setTimeout(function () {
                     if (emailVar == 'leo@gmail.com'){
                         window.location = "./dashboard/dashboard copy.html";
