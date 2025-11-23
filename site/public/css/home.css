@@ -179,19 +179,21 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 800px;
+  height: 820px;
   background-color: #b8c7ae;
+  background-image: url(../assets/imgs/banner_home_simule.png);
+  background-size: cover;
 }
 
 .container_praia img{
-  width: 550px;
+  width: 450px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  margin-left: 5%;
+
 }
 
 .container_praia h1 {
-  font-size: 75px;
+  font-size: 65px;
   margin-top: 4%;
   margin-bottom: 4%;
   font-weight: 800;
@@ -219,7 +221,7 @@ body {
 }
 
 .texto_praia h2 {
-  font-size: 45px;
+  font-size: 38px;
   font-weight: 800;
   color: #b8c7ae;
 }
@@ -227,7 +229,121 @@ body {
 .texto_praia p {
   width: 80%;
   margin-top: 0;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 500;
   color: #c8cfc4;
+}
+
+.footer {
+  background-color: #f7f5f5;
+  height: 240px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.conteudo_footer {
+  display: flex;
+  justify-content: space-between;
+  height: 240px;
+}
+
+.logo_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 150px;
+}
+
+.logo_footer img {
+  width: 180px;
+}
+
+.informacao_footer {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+  
+}
+
+.contato_footer {
+  display: flex;
+  flex-direction: column;
+  color: #020e4b;
+  margin-right: 30px;
+  height: 140px;
+}
+
+.contato_footer span {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mapa_footer {
+  display: flex;
+  flex-direction: column;
+  color: #020e4b;
+  height: 140px;
+}
+
+.mapa_footer a {
+  text-decoration: none;
+  color: #020e4b;
+}
+
+.footer_copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #020e4b;
+  border-top: 0.5px solid #020e4b;
+  height: 40px;
+}
+
+.container_simule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  background-color: #020e4b;
+}
+
+.container_simule h1 {
+  font-size: 65px;
+  margin-bottom: 2%;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center; 
+}
+
+.container_simule p {
+  margin-top: 0;
+  font-size: 30px;
+  color: #e0e3f3;
+}
+
+.container_simule a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #020e4b;
+  background-color: #fff;
+  color: #020e4b;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  width: 15%;
+  height: 8%;
+  transition: 0.3s ease;
+}
+
+.container_simule a:hover {
+  border: 2px solid #fff;
+  background-color: #020e4b;
+  color: #fff;
 }
