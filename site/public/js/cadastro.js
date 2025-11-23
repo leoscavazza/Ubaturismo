@@ -147,7 +147,26 @@ function cadastrar() {
     var nomeVar = nome_input.value;
     var idadeVar = idade_input.value;
     var emailVar = email_input.value;
-    var senhaVar = senha_input.value
+    var senhaVar = senha_input.value;
+    var idIdadeVar = 0;
+
+    if (idadeVar < 26) {
+        idIdadeVar = 1;
+    } else if (idadevar >= 26 && idadeVar <= 35) {
+        idIdadeVar = 2;
+    } else if (idadevar > 35 && idadeVar <= 45) {
+        idIdadeVar = 3;
+    } else if (idadevar > 45 && idadeVar <= 55) {
+        idIdadeVar = 4;
+    } else if (idadevar > 55 && idadeVar <= 65) {
+        idIdadeVar = 5;
+    } else if (idadevar > 65 && idadeVar <= 75) {
+        idIdadeVar = 6;
+    } else if (idadevar > 76 && idadeVar <= 85) {
+        idIdadeVar = 7;
+    } else if (idadevar > 85 && idadeVar <= 95) {
+        idIdadeVar = 8;
+    }  
 
     // Validando o cadastro
     if (nomeCorreto == false || idadeCorreta == false || emailCorreto == false || senhaCorreta == false || confirmarCorreto == false) {
@@ -162,7 +181,8 @@ function cadastrar() {
                 nomeServer: nomeVar,
                 idadeServer: idadeVar,
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                idIdadeServer: idIdadeVar
             }),
         })
             .then(function (resposta) {

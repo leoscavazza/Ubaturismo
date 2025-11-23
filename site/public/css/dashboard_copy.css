@@ -90,6 +90,11 @@ body {
   font-weight: 800;
 }
 
+.container_kpi p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .kpi {
   display: flex;
   flex-direction: column;
@@ -121,7 +126,8 @@ body {
 }
 
 .container_grafico_praia h3{
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: 800;
 }
 
 .container_grafico_evento{
@@ -137,7 +143,8 @@ body {
 }
 
 .container_grafico_evento h3{
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: 800;
 }
 
 .grafico_praia {

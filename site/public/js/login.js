@@ -35,7 +35,7 @@ function entrar() {
                 
                 setTimeout(function () {
                     if (emailVar == 'leo@gmail.com'){
-                        window.location = "./dashboard/dashboard copy.html";
+                        window.location = "./dashboard/dashboard_copy.html";
                     } else {
                         window.location = "../home.html";
                     }

@@ -4,8 +4,9 @@ function idade(req, res) {
     dashboardModel.idade()
         .then(
             function (resultado) {
-                if (resultado.lenght > 0) {
+                if (resultado.length > 0) {
                     res.status(200).json(resultado[0]);
+
                 } else {
                     res.status(204).send("Nenhum resultado encontrado!");
                 }
@@ -27,7 +28,7 @@ function praia(req, res) {
     dashboardModel.praia()
         .then(
             function (resultado) {
-                if (resultado.lenght > 0) {
+                if (resultado.length > 0) {
                     res.status(200).json(resultado[0]);
                 } else {
                     res.status(204).send("Nenhum resultado encontrado!");
@@ -50,7 +51,7 @@ function evento(req, res) {
     dashboardModel.evento()
         .then(
             function (resultado) {
-                if (resultado.lenght > 0) {
+                if (resultado.length > 0) {
                     res.status(200).json(resultado[0]);
                 } else {
                     res.status(204).send("Nenhum resultado encontrado!");
@@ -73,7 +74,7 @@ function hobbie(req, res) {
     dashboardModel.hobbie()
         .then(
             function (resultado) {
-                if (resultado.lenght > 0) {
+                if (resultado.length > 0) {
                     res.status(200).json(resultado[0]);
                 } else {
                     res.status(204).send("Nenhum resultado encontrado!");
@@ -96,8 +97,8 @@ function graficopraia(req, res) {
     dashboardModel.graficopraia()
         .then(
             function (resultado) {
-                if (resultado.lenght > 0) {
-                    res.status(200).json(resultado[0]);
+                if (resultado.length > 0) {
+                    res.status(200).json(resultado);
                 } else {
                     res.status(204).send("Nenhum resultado encontrado!");
                 }
@@ -119,8 +120,8 @@ function graficoevento(req, res) {
     dashboardModel.graficoevento()
         .then(
             function (resultado) {
-                if (resultado.lenght > 0) {
-                    res.status(200).json(resultado[0]);
+                if (resultado.length > 0) {
+                    res.status(200).json(resultado);
                 } else {
                     res.status(204).send("Nenhum resultado encontrado!");
                 }
@@ -144,5 +145,5 @@ module.exports = {
     evento,
     hobbie,
     graficopraia,
-    graficoevento
+    graficoevento 
 }
