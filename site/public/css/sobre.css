@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Dancing+Script:wght@400..700&family=Kaushan+Script&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #020e4b;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 50px;
+}
+
+.header img {
+  width: 100px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header li {
+  color: #fff;
+}
+
+.navbar {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.container_banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 700px;  
+}
+
+.banner_sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    margin-top: 8%;
+    background-image: url(../assets/imgs/banner_sobre_mim.png);
+    background-size: cover;  
+}
+
+.container_banner h1 {
+  font-size: 140px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.titulo_fonte {
+  font-family: "Kaushan Script", cursive;
+}
+
+.container_sobre {
+  display: flex;
+  height: 800px;
+}
+
+.conteudo_sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 98%;
+  margin-top: 1.5%;
+  background-color: #020e4b;
+}
+
+.texto_sobre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.texto_sobre h1{
+    font-size: 55px;
+    font-weight: 800;
+    margin-bottom: 3%;
+}   
+
+.texto_sobre p {
+    font-size: 25px;
+    width: 85%;
+}
+
+.container_imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 98%;
+    margin-top: 1.5%;
+    background-image: url(../assets/imgs/unnamed.jpg);
+    background-size: cover;
+}
+
+.container_imagem img {
+    width: 100%;
+    height: 100%;
+}
+
+.container_praia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+
+.container_praia h1 {
+  font-size: 75px;
+  font-weight: 800;
+  margin-top: 0;
+  color: #083b14;
+  text-align: center;
+}
+
+.texto_fonte_praia {
+  font-family: "Kaushan Script", cursive;
+}
+
+.conteudo_praia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5% 0 5%;
+}
+
+.conteudo_praia img {
+  width: 660px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.texto_praia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #083b14;
+  width: 45%;
+  height: 100%;  
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.texto_praia h2 {
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.texto_praia p {
+  text-align: center;
+  width: 80%;
+  font-size: 22px;
+  color: #fff;  
+}
+
+.container_hobbie {
+  display: flex;
+  width: 100%;
+  height: 700px;
+}
+
+.texto_hobbie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #b8c7ae;
+}
+
+.texto_hobbie h1 { 
+  font-size: 70px;
+  font-weight: 800;
+  color: #083b14;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.texto_fonte_hobbie {
+  font-family: "Kaushan Script", cursive;  
+}
+
+.texto_hobbie p {
+  width: 80%;  
+  font-size: 30px
+}
+
+.imagem_hobbie {
+  width: 70%;
+  height: 100%;
+  background-image: url(../assets/imgs/imagem_pedra.jpeg);
+  background-size: cover;
+}
+
+.footer {
+  background-color: #f7f5f5;
+  height: 240px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.conteudo_footer {
+  display: flex;
+  justify-content: space-between;
+  height: 240px;
+}
+
+.logo_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 150px;
+}
+
+.logo_footer img {
+  width: 180px;
+}
+
+.informacao_footer {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+  
+}
+
+.contato_footer {
+  display: flex;
+  flex-direction: column;
+  color: #020e4b;
+  margin-right: 30px;
+  height: 140px;
+}
+
+.contato_footer span {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mapa_footer {
+  display: flex;
+  flex-direction: column;
+  color: #020e4b;
+  height: 140px;
+}
+
+.mapa_footer a {
+  text-decoration: none;
+  color: #020e4b;
+}
+
+.footer_copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #020e4b;
+  border-top: 0.5px solid #020e4b;
+  height: 40px;
+}
+
+.container_simule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  background-color: #020e4b;
+}
+
+.container_simule h1 {
+  font-size: 65px;
+  margin-bottom: 2%;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center; 
+}
+
+.container_simule p {
+  margin-top: 0;
+  font-size: 30px;
+  color: #e0e3f3;
+}
+
+.container_simule a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #020e4b;
+  background-color: #fff;
+  color: #020e4b;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  width: 15%;
+  height: 8%;
+  transition: 0.3s ease;
+}
+
+.container_simule a:hover {
+  border: 2px solid #fff;
+  background-color: #020e4b;
+  color: #fff;
+}
