@@ -86,3 +86,131 @@ body {
     background-size: cover;
 }
 
+.container_maranduba {
+    display: flex;
+    width: 100%;
+    height: 750px;
+}
+
+.conteudo_maranduba {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 6%;
+}
+
+.texto_maranduba {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #083b14;
+}
+
+.texto_maranduba h1{
+    font-size: 55px;
+    font-weight: 800;
+    color: #fff;   
+}
+
+.texto_maranduba p{
+    width: 80%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.imagem_maranduba {
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/imgs/imagem_estaleiro.jpg);
+    background-size: cover;
+}
+
+.container_fortaleza {
+    display: flex;
+    width: 100%;
+    height: 750px;
+}
+
+.conteudo_fortaleza {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 6%;
+}
+
+.texto_fortaleza {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.texto_fortaleza h1{
+    font-size: 55px;
+    font-weight: 800;
+    color: #020e4b;   
+}
+
+.texto_fortaleza p{
+    width: 80%;
+    font-size: 20px;
+    color: #020e4b;
+    text-align: center;
+}
+
+.imagem_fortaleza {
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/imgs/imagem_estaleiro.jpg);
+    background-size: cover;
+}
+
+.container_felix {
+    display: flex;
+    width: 100%;
+    height: 750px;
+}
+
+.conteudo_felix {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 6%;
+}
+
+.texto_felix {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e3f3;
+}
+
+.texto_felix h1{
+    font-size: 55px;
+    font-weight: 800;
+    color: #020e4b;   
+}
+
+.texto_felix p{
+    width: 80%;
+    font-size: 20px;
+    color: #020e4b;
+    text-align: center;
+}
+
+.imagem_felix {
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/imgs/imagem_estaleiro.jpg);
+    background-size: cover;
+}
