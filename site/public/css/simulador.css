@@ -17,7 +17,7 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
-  margin: 0px 50px;
+  margin: 0px 5% 0% 4%;
 }
 
 .header img {
@@ -25,19 +25,21 @@ body {
 }
 
 .header a {
+  font-size: 20px;
   text-decoration: none;
   color: #fff;
+  font-weight: 600;
 }
 
 .header li {
   color: #fff;
+  margin: 0% 7% 0% 7%;
 }
 
 .navbar {
-  width: 300px;
+  width: 10%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   list-style: none;
 }
 
@@ -371,4 +373,73 @@ body {
   background-color: #fff;
   color: #083b14;
   border: 2px solid #083b14;
+}
+
+.footer {
+  background-color: #f7f5f5;
+  height: 240px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.conteudo_footer {
+  display: flex;
+  justify-content: space-between;
+  height: 240px;
+}
+
+.logo_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 150px;
+}
+
+.logo_footer img {
+  width: 180px;
+}
+
+.informacao_footer {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+  
+}
+
+.contato_footer {
+  display: flex;
+  flex-direction: column;
+  color: #020e4b;
+  margin-right: 30px;
+  height: 140px;
+}
+
+.contato_footer span {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mapa_footer {
+  display: flex;
+  flex-direction: column;
+  color: #020e4b;
+  height: 140px;
+}
+
+.mapa_footer a {
+  text-decoration: none;
+  color: #020e4b;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.footer_copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #020e4b;
+  border-top: 0.5px solid #020e4b;
+  height: 40px;
 }

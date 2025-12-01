@@ -19,7 +19,7 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
-  margin: 0px 50px;
+  margin: 0px 7% 0% 4%;
 }
 
 .header img {
@@ -27,20 +27,47 @@ body {
 }
 
 .header a {
+  font-size: 20px;
   text-decoration: none;
   color: #fff;
+  font-weight: 600;
 }
 
 .header li {
   color: #fff;
+  margin: 0% 7% 0% 7%;
 }
 
 .navbar {
-  width: 300px;
+  width: 10%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   list-style: none;
+}
+
+.container_banner {
+  display: flex;
+  width: 100%;
+  height: 650px;
+}
+
+.conteudo_banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 6.5%;
+  background-image: url(../assets/imgs/banner_praia.png);
+  background-size: cover;
+}
+
+.conteudo_banner h1 {
+  font-size: 150px;
+  font-weight: 800;
+  color: #a4aac5;
+  margin-bottom: 10%;
+  font-family: "Kaushan Script", cursive;
 }
 
 .container_estaleiro {
@@ -53,7 +80,7 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    margin-top: 6%;
+    margin-top: 5.5%;
 }
 
 .texto_estaleiro {
@@ -67,14 +94,15 @@ body {
 }
 
 .texto_estaleiro h1{
-    font-size: 55px;
+    font-size: 70px;
     font-weight: 800;
+    margin-bottom: 2%;
     color: #fff;   
 }
 
 .texto_estaleiro p{
     width: 80%;
-    font-size: 20px;
+    font-size: 22px;
     color: #fff;
     text-align: center;
 }
@@ -84,6 +112,11 @@ body {
     height: 100%;
     background-image: url(../assets/imgs/imagem_estaleiro.jpg);
     background-size: cover;
+}
+
+.imagem_estaleiro img {
+  width: 100%;
+  height: 100%;
 }
 
 .container_maranduba {
@@ -96,7 +129,7 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    margin-top: 6%;
+    margin-top: 5.5%;
 }
 
 .texto_maranduba {
@@ -110,14 +143,15 @@ body {
 }
 
 .texto_maranduba h1{
-    font-size: 55px;
+    font-size: 70px;
     font-weight: 800;
+    margin-bottom: 2%;
     color: #fff;   
 }
 
 .texto_maranduba p{
     width: 80%;
-    font-size: 20px;
+    font-size: 22px;
     color: #fff;
     text-align: center;
 }
@@ -125,8 +159,13 @@ body {
 .imagem_maranduba {
     width: 100%;
     height: 100%;
-    background-image: url(../assets/imgs/imagem_estaleiro.jpg);
+    background-image: url(../assets/imgs/imagem_maranduba.jpg);
     background-size: cover;
+}
+
+.imagem_maranduba img {
+  width: 100%;
+  height: 100%;
 }
 
 .container_fortaleza {
@@ -139,7 +178,7 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    margin-top: 6%;
+    margin-top: 5.5%;
 }
 
 .texto_fortaleza {
@@ -153,14 +192,15 @@ body {
 }
 
 .texto_fortaleza h1{
-    font-size: 55px;
+    font-size: 70px;
     font-weight: 800;
+    margin-bottom: 2%;
     color: #020e4b;   
 }
 
 .texto_fortaleza p{
     width: 80%;
-    font-size: 20px;
+    font-size: 22px;
     color: #020e4b;
     text-align: center;
 }
@@ -168,8 +208,13 @@ body {
 .imagem_fortaleza {
     width: 100%;
     height: 100%;
-    background-image: url(../assets/imgs/imagem_estaleiro.jpg);
+    background-image: url(../assets/imgs/imagem_fortaleza.jpg);
     background-size: cover;
+}
+
+.imagem_fortaleza img {
+  width: 100%;
+  height: 100%;
 }
 
 .container_felix {
@@ -182,7 +227,7 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    margin-top: 6%;
+    margin-top: 5.5%;
 }
 
 .texto_felix {
@@ -196,14 +241,15 @@ body {
 }
 
 .texto_felix h1{
-    font-size: 55px;
+    font-size: 70px;
     font-weight: 800;
+    margin-bottom: 2%;
     color: #020e4b;   
 }
 
 .texto_felix p{
     width: 80%;
-    font-size: 20px;
+    font-size: 22px;
     color: #020e4b;
     text-align: center;
 }
@@ -211,6 +257,130 @@ body {
 .imagem_felix {
     width: 100%;
     height: 100%;
-    background-image: url(../assets/imgs/imagem_estaleiro.jpg);
+    background-image: url(../assets/imgs/imagem_felix.jpg);
     background-size: cover;
+}
+
+.imagem_felix img {
+  width: 100%;
+  height: 100%;
+}
+
+.container_pereque {
+    display: flex;
+    width: 100%;
+    height: 750px;
+}
+
+.conteudo_pereque {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 5.5%;
+}
+
+.texto_pereque {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #b8c7ae;
+}
+
+.texto_pereque h1{
+    font-size: 70px;
+    font-weight: 800;
+    margin-bottom: 2%;
+    color: #083b14;   
+}
+
+.texto_pereque p{
+    width: 80%;
+    font-size: 22px;
+    color: #083b14;
+    text-align: center;
+}
+
+.imagem_pereque {
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/imgs/imagem_pereque.jpg);
+    background-size: cover;
+}
+
+.imagem_pereque img {
+  width: 100%;
+  height: 99%;
+}
+
+.footer {
+  background-color: #f7f5f5;
+  height: 350px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.conteudo_footer {
+  display: flex;
+  justify-content: space-between;
+  height: 95%;
+}
+
+.logo_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 150px;
+}
+
+.logo_footer img {
+  width: 180px;
+  margin-top: 40%;
+}
+
+.informacao_footer {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+  margin-top: 5%;
+}
+
+.contato_footer {
+  display: flex;
+  flex-direction: column;
+  color: #020e4b;
+  margin-right: 30px;
+  height: 140px;
+}
+
+.contato_footer span {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mapa_footer {
+  display: flex;
+  flex-direction: column;
+  color: #020e4b;
+  height: 140px;
+}
+
+.mapa_footer a {
+  text-decoration: none;
+  color: #020e4b;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.footer_copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #020e4b;
+  border-top: 0.5px solid #020e4b;
+  height: 40px;
 }
