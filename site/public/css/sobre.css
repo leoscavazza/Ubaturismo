@@ -19,27 +19,33 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
-  margin: 0px 50px;
+  margin: 0px 11% 0% 4%;
 }
 
 .header img {
   width: 100px;
 }
 
+.header b {
+  white-space: nowrap;
+}
+
 .header a {
+  font-size: 20px;
   text-decoration: none;
   color: #fff;
+  font-weight: 600;
 }
 
 .header li {
   color: #fff;
+  margin: 0% 7% 0% 7%;
 }
 
 .navbar {
-  width: 300px;
+  width: 10%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   list-style: none;
 }
 
@@ -277,6 +283,8 @@ body {
 .mapa_footer a {
   text-decoration: none;
   color: #020e4b;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .footer_copyright {

@@ -19,11 +19,15 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
-  margin: 0px 7% 0% 4%;
+  margin: 0px 13% 0% 4%;
 }
 
 .header img {
   width: 100px;
+}
+
+.header b {
+  white-space: nowrap;
 }
 
 .header a {

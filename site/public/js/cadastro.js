@@ -152,19 +152,19 @@ function cadastrar() {
 
     if (idadeVar < 26) {
         idIdadeVar = 1;
-    } else if (idadevar >= 26 && idadeVar <= 35) {
+    } else if (idadeVar >= 26 && idadeVar <= 35) {
         idIdadeVar = 2;
-    } else if (idadevar > 35 && idadeVar <= 45) {
+    } else if (idadeVar > 35 && idadeVar <= 45) {
         idIdadeVar = 3;
-    } else if (idadevar > 45 && idadeVar <= 55) {
+    } else if (idadeVar > 45 && idadeVar <= 55) {
         idIdadeVar = 4;
-    } else if (idadevar > 55 && idadeVar <= 65) {
+    } else if (idadeVar > 55 && idadeVar <= 65) {
         idIdadeVar = 5;
-    } else if (idadevar > 65 && idadeVar <= 75) {
+    } else if (idadeVar > 65 && idadeVar <= 75) {
         idIdadeVar = 6;
-    } else if (idadevar > 76 && idadeVar <= 85) {
+    } else if (idadeVar > 76 && idadeVar <= 85) {
         idIdadeVar = 7;
-    } else if (idadevar > 85 && idadeVar <= 95) {
+    } else if (idadeVar > 85 && idadeVar <= 95) {
         idIdadeVar = 8;
     }  
 

@@ -30,8 +30,9 @@ function entrar() {
                 console.log(json);
                 console.log(JSON.stringify(json));
                 sessionStorage.EMAIL_USUARIO = json[0].email;
-                localStorage.NOME_USUARIO = json[0].nome;
                 sessionStorage.ID_USUARIO = json[0].id;
+                localStorage.IDADE_USUARIO = json[0].idade;
+                localStorage.NOME_USUARIO = json[0].nome;
                 
                 setTimeout(function () {
                     if (emailVar == 'leo@gmail.com'){
