@@ -30,7 +30,7 @@ function entrar() {
                 console.log(json);
                 console.log(JSON.stringify(json));
                 sessionStorage.EMAIL_USUARIO = json[0].email;
-                sessionStorage.ID_USUARIO = json[0].id;
+                localStorage.ID_USUARIO = json[0].id;
                 localStorage.IDADE_USUARIO = json[0].idade;
                 localStorage.NOME_USUARIO = json[0].nome;
                 
@@ -40,7 +40,7 @@ function entrar() {
                     } else {
                         window.location = "../home.html";
                     }
-                }, 1000); // apenas para exibir o loading
+                }, 500); // apenas para exibir o loading
 
             });
 
@@ -51,6 +51,9 @@ function entrar() {
             resposta.text().then(texto => {
                 console.error(texto);
             });
+
+            msg_erro_email.innerHTML = `Login e/ou senha inválido(s)`;
+            msg_erro_senha.innerHTML = `Login e/ou senha inválido(s)`;
         }
 
     }).catch(function (erro) {

@@ -22,6 +22,15 @@ function simular() {
         var litros = distancia / consumo;
         var preco = litros * 6.16;
         var tempo = distancia / 75;
+        var tempo_inteiro = Math.floor(tempo);
+
+        console.log(tempo_inteiro);
+
+        if ((tempo - tempo_inteiro) >= 0.6) {
+            tempo += 1;
+
+        }
+        console.log(tempo);
 
         card_simulador.innerHTML =
             `<h1>Resultado</h1>
@@ -29,7 +38,7 @@ function simular() {
                 <p>Distância total da viagem: ${distancia} Km</p>
             </div>
             <div class="linha_resultado">
-                <p>Duração aproximada da viagem: ${tempo} Horas</p>
+                <p>Duração aproximada da viagem: ${Math.floor(tempo)} Horas</p>
             </div>
             <div id="ultima_linha" class="linha_resultado">
                 <p>Gasto total com gasolina: ${preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>

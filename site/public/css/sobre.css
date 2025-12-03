@@ -19,7 +19,7 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
-  margin: 0px 11% 0% 4%;
+  margin: 0px 16% 0% 4%;
 }
 
 .header img {
@@ -54,18 +54,18 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 700px;  
+  height: 700px;
 }
 
 .banner_sobre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 90%;
-    margin-top: 8%;
-    background-image: url(../assets/imgs/banner_sobre_mim.png);
-    background-size: cover;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  margin-top: 8%;
+  background-image: url(../assets/imgs/banner_sobre_mim.png);
+  background-size: cover;
 }
 
 .container_banner h1 {
@@ -101,31 +101,31 @@ body {
   color: #fff;
 }
 
-.texto_sobre h1{
-    font-size: 55px;
-    font-weight: 800;
-    margin-bottom: 3%;
-}   
+.texto_sobre h1 {
+  font-size: 55px;
+  font-weight: 800;
+  margin-bottom: 3%;
+}
 
 .texto_sobre p {
-    font-size: 25px;
-    width: 85%;
+  font-size: 25px;
+  width: 85%;
 }
 
 .container_imagem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 98%;
-    margin-top: 1.5%;
-    background-image: url(../assets/imgs/unnamed.jpg);
-    background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 98%;
+  margin-top: 1.5%;
+  background-image: url(../assets/imgs/unnamed.jpg);
+  background-size: cover;
 }
 
 .container_imagem img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .container_praia {
@@ -168,7 +168,7 @@ body {
   align-items: center;
   background-color: #083b14;
   width: 45%;
-  height: 100%;  
+  height: 100%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
@@ -184,7 +184,7 @@ body {
   text-align: center;
   width: 80%;
   font-size: 22px;
-  color: #fff;  
+  color: #fff;
 }
 
 .container_hobbie {
@@ -203,7 +203,7 @@ body {
   background-color: #b8c7ae;
 }
 
-.texto_hobbie h1 { 
+.texto_hobbie h1 {
   font-size: 70px;
   font-weight: 800;
   color: #083b14;
@@ -212,11 +212,11 @@ body {
 }
 
 .texto_fonte_hobbie {
-  font-family: "Kaushan Script", cursive;  
+  font-family: "Kaushan Script", cursive;
 }
 
 .texto_hobbie p {
-  width: 80%;  
+  width: 80%;
   font-size: 30px
 }
 
@@ -225,6 +225,54 @@ body {
   height: 100%;
   background-image: url(../assets/imgs/imagem_pedra.jpeg);
   background-size: cover;
+}
+
+
+.container_simule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  background-color: #020e4b;
+}
+
+.container_simule h1 {
+  font-size: 65px;
+  margin-bottom: 2%;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+}
+
+.container_simule p {
+  margin-top: 0;
+  font-size: 30px;
+  color: #e0e3f3;
+}
+
+.container_simule a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #020e4b;
+  background-color: #fff;
+  color: #020e4b;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  width: 15%;
+  height: 8%;
+  transition: 0.3s ease;
+}
+
+.container_simule a:hover {
+  border: 2px solid #fff;
+  background-color: #020e4b;
+  color: #fff;
 }
 
 .footer {
@@ -257,7 +305,7 @@ body {
   display: flex;
   align-items: center;
   margin-right: 150px;
-  
+  margin-bottom: 3%;
 }
 
 .contato_footer {
@@ -294,51 +342,4 @@ body {
   color: #020e4b;
   border-top: 0.5px solid #020e4b;
   height: 40px;
-}
-
-.container_simule {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 600px;
-  background-color: #020e4b;
-}
-
-.container_simule h1 {
-  font-size: 65px;
-  margin-bottom: 2%;
-  font-weight: 800;
-  color: #ffffff;
-  text-align: center; 
-}
-
-.container_simule p {
-  margin-top: 0;
-  font-size: 30px;
-  color: #e0e3f3;
-}
-
-.container_simule a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #020e4b;
-  background-color: #fff;
-  color: #020e4b;
-  font-size: 20px;
-  font-weight: 800;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 10px;
-  width: 15%;
-  height: 8%;
-  transition: 0.3s ease;
-}
-
-.container_simule a:hover {
-  border: 2px solid #fff;
-  background-color: #020e4b;
-  color: #fff;
 }

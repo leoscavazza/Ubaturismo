@@ -9,7 +9,7 @@ function idade() {
         FROM usuario JOIN faixa_etaria
 	        ON usuario.fkFaixaEtaria = faixa_etaria.id
         GROUP BY fkFaixaEtaria
-        ORDER BY fkFaixaEtaria ASC
+        ORDER BY idade DESC
         LIMIT 1;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
@@ -25,7 +25,7 @@ function praia() {
         FROM usuario_praia JOIN praia
 	        ON usuario_praia.idPraia = praia.id
         GROUP BY idPraia
-        ORDER BY idPraia ASC
+        ORDER BY praia DESC
         LIMIT 1;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
@@ -41,7 +41,7 @@ function evento() {
         FROM usuario JOIN evento
 	        ON usuario.fkEvento = evento.id
         GROUP BY fkEvento
-        ORDER BY fkEvento ASC
+        ORDER BY evento DESC
         LIMIT 1;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
@@ -57,7 +57,7 @@ function hobbie() {
         FROM usuario JOIN hobbie
             ON usuario.fkHobbie = hobbie.id
         GROUP BY fkHobbie
-        ORDER BY fkHobbie ASC
+        ORDER BY hobbie DESC
         LIMIT 1;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);

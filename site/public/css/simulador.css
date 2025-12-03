@@ -17,7 +17,7 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
-  margin: 0px 11% 0% 4%;
+  margin: 0px 18% 0% 4%;
 }
 
 .header img {
@@ -409,7 +409,7 @@ body {
   display: flex;
   align-items: center;
   margin-right: 150px;
-  
+  margin-bottom: 3%;
 }
 
 .contato_footer {

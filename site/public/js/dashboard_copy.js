@@ -88,7 +88,7 @@ function kpiEvento() {
                 } else if (nome_evento == 'Visita ao Aquário de Ubatuba') {
                     textoEvento.innerHTML = `Visita ao Aquário de Ubatuba`;
                 } else if (nome_evento == 'Passeio na feirinha do Centro de Ubatuba') {
-                    textoEvento.innerHTML = `Passeio na feirinha do Centro de Ubatuba`;
+                    textoEvento.innerHTML = `Passeio na Feirinha`;
                 } else if (nome_evento == 'Balada no Cafe de La Musique') {
                     textoEvento.innerHTML = `Balada no Cafe de La Musique`;
                 } else {

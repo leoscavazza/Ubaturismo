@@ -19,7 +19,7 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
-  margin: 0px 13% 0% 4%;
+  margin: 0px 18% 0% 4%;
 }
 
 .header img {
@@ -114,7 +114,7 @@ body {
 .imagem_festival {
     width: 100%;
     height: 100%;
-    background-image: url(../assets/imgs/imagem_estaleiro.jpg);
+    background-image: url(../assets/imgs/xande_de_pilares.jpeg);
     background-size: cover;
 }
 
@@ -163,7 +163,7 @@ body {
 .imagem_maranduba {
     width: 100%;
     height: 100%;
-    background-image: url(../assets/imgs/imagem_maranduba.jpg);
+    background-image: url(../assets/imgs/imagem_aquario.jpg);
     background-size: cover;
 }
 
@@ -221,20 +221,20 @@ body {
   height: 100%;
 }
 
-.container_felix {
+.container_feira {
     display: flex;
     width: 100%;
     height: 750px;
 }
 
-.conteudo_felix {
+.conteudo_feira {
     display: flex;
     width: 100%;
     height: 100%;
     margin-top: 5.5%;
 }
 
-.texto_felix {
+.texto_feira {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -244,28 +244,28 @@ body {
     background-color: #e0e3f3;
 }
 
-.texto_felix h1{
+.texto_feira h1{
     font-size: 70px;
     font-weight: 800;
     margin-bottom: 2%;
     color: #020e4b;   
 }
 
-.texto_felix p{
+.texto_feira p{
     width: 80%;
     font-size: 22px;
     color: #020e4b;
     text-align: center;
 }
 
-.imagem_felix {
+.imagem_feira {
     width: 100%;
     height: 100%;
-    background-image: url(../assets/imgs/imagem_felix.jpg);
+    background-image: url(../assets/imgs/feirinha_ubatuba.jpg);
     background-size: cover;
 }
 
-.imagem_felix img {
+.imagem_feira img {
   width: 100%;
   height: 100%;
 }
@@ -310,7 +310,7 @@ body {
 .imagem_pereque {
     width: 100%;
     height: 100%;
-    background-image: url(../assets/imgs/imagem_pereque.jpg);
+    background-image: url(../assets/imgs/balada_ubatuba.jpg);
     background-size: cover;
 }
 
@@ -351,6 +351,7 @@ body {
   align-items: center;
   margin-right: 150px;
   margin-top: 5%;
+  margin-bottom: 2%;
 }
 
 .contato_footer {

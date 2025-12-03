@@ -44,10 +44,17 @@
                     <div class="campo">
                         <span>E-mail:</span>
                         <input id="email_input" type="text" placeholder="E-mail" />
+                        <div id="msg_erro_email"></div>
                     </div>
                     <div class="campo" id="campo">
                         <span>Senha:</span>
-                        <input id="senha_input" type="password" placeholder="Senha" />
+                        <div class="container_input">
+                            <input id="senha_input" type="password" placeholder="Senha" />
+                            <button id="botao_ver_senha" onclick="verSenha()">
+                                <img src="assets/imgs/ver_senha_login.png" alt="botão ver senha">
+                            </button>
+                        </div>
+                        <div id="msg_erro_senha"></div>
                     </div>
                     <button class="botao" onclick="entrar()">Entrar</button>
                 </div>
@@ -55,5 +62,23 @@
         </div>
     </div>
 </body>
+
+<script>
+    var contador_botao = 0;
+    function verSenha() {
+    var input_senha = document.getElementById("senha_input");
+    var botao_ver_senha = document.getElementById("botao_ver_senha");
+
+    if (contador_botao % 2 == 0) {
+        input_senha.type = "text";
+        botao_ver_senha.innerHTML = `<img src="assets/imgs/voltar_senha_login.png" alt="botão voltar senha">`;
+    } else {
+        input_senha.type = "password";
+        botao_ver_senha.innerHTML = `<img src="assets/imgs/ver_senha_login.png" alt="botão ver senha">`;
+    }
+
+    contador_botao++
+    }
+</script>
 
 </html>

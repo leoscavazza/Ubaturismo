@@ -19,7 +19,7 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
-  margin: 0px 13% 0% 4%;
+  margin: 0px 19% 0% 4%;
 }
 
 .header img {
@@ -195,7 +195,6 @@ body {
   width: 450px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-
 }
 
 .container_praia h1 {
@@ -318,7 +317,7 @@ body {
   display: flex;
   align-items: center;
   margin-right: 150px;
-  
+  margin-bottom: 3%;
 }
 
 .contato_footer {

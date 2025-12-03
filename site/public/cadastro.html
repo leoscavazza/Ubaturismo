@@ -69,13 +69,23 @@
           </div>
           <div class="campo" id="campo">
             <span>Senha:</span>
-            <input id="senha_input" oninput="validacaoSenha()" type="password" placeholder="Senha" />
+            <div class="container_input">
+              <input id="senha_input" oninput="validacaoSenha()" type="password" placeholder="Senha" />
+              <button id="botao_ver_senha" onclick="verSenha()">
+                <img src="assets/imgs/ver_senha_cadastro.png" alt="botão ver senha">
+              </button>
+            </div>
             <span id="senha_mensagem"></span>
           </div>
           <div class="campo">
             <span>Confirme sua senha:</span>
-            <input id="confirmacao_senha_input" oninput="validacaoConfirmar()" type="password"
+            <div class="container_input">
+              <input id="confirmacao_senha_input" oninput="validacaoConfirmar()" type="password"
               placeholder="Confirme sua senha" />
+              <button id="botao_verificar_senha" onclick="verificarSenha()">
+                <img src="assets/imgs/ver_senha_cadastro.png" alt="botão ver senha">
+              </button>
+            </div>
             <span id="confirmar_mensagem"></span>
           </div>
           <button class="botao" onclick="cadastrar()">Cadastrar</button>
@@ -84,5 +94,41 @@
     </div>
   </div>
 </body>
+
+<script>
+
+  var contador_botao = 0;
+    function verSenha() {
+    var input_senha = document.getElementById("senha_input");
+    var botao_ver_senha = document.getElementById("botao_ver_senha");
+
+    if (contador_botao % 2 == 0) {
+        input_senha.type = "text";
+        botao_ver_senha.innerHTML = `<img src="assets/imgs/voltar_senha_cadastrar.png" alt="botão voltar senha">`;
+    } else {
+        input_senha.type = "password";
+        botao_ver_senha.innerHTML = `<img src="assets/imgs/ver_senha_cadastro.png" alt="botão ver senha">`;
+    }
+
+    contador_botao++
+  }
+
+  var contador_botao_verificar = 0;
+  function verificarSenha() {
+    var input_senha = document.getElementById("confirmacao_senha_input");
+    var botao_ver_senha = document.getElementById("botao_verificar_senha");
+
+    if (contador_botao_verificar % 2 == 0) {
+        input_senha.type = "text";
+        botao_ver_senha.innerHTML = `<img src="assets/imgs/voltar_senha_cadastrar.png" alt="botão voltar senha">`;
+    } else {
+        input_senha.type = "password";
+        botao_ver_senha.innerHTML = `<img src="assets/imgs/ver_senha_cadastro.png" alt="botão ver senha">`;
+    }
+
+    contador_botao_verificar++
+  }
+
+</script>
 
 </html>
