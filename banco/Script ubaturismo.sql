@@ -14,6 +14,11 @@ CREATE TABLE hobbie (
  descricao VARCHAR(255)
 );
 
+CREATE TABLE faixa_etaria (
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(45)
+);
+
 CREATE TABLE usuario (
 id INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(255),
@@ -23,17 +28,20 @@ senha VARCHAR(100),
 administrador INT,
 fkEvento INT,
 fkHobbie INT,
+fkFaixaEtaria INT,
 CONSTRAINT fk_evento_usuario 
 	FOREIGN KEY (fkEvento)
 		REFERENCES evento(id),
 CONSTRAINT fk_hobbie_usuario
 	FOREIGN KEY (fkHobbie)
-		REFERENCES hobbie(id)
-);
-
-ALTER TABLE usuario ADD CONSTRAINT fk_usuario_administrador
+		REFERENCES hobbie(id),
+CONSTRAINT fkFaixaEtaria_usuario
+	FOREIGN KEY (fkFaixaEtaria)
+		REFERENCES faixa_etaria(id),
+CONSTRAINT fk_usuario_administrador
 	FOREIGN KEY (administrador)
-		REFERENCES usuario(id);
+		REFERENCES usuario(id)
+);
 
 CREATE TABLE praia (
 id INT PRIMARY KEY AUTO_INCREMENT, 
@@ -56,7 +64,7 @@ CONSTRAINT fk_praia_usuario
 
 SELECT * FROM evento;
 
-SELECT * FROM usuario;	
+SELECT * FROM usuario;
 
 SELECT * FROM praia;
 
@@ -81,6 +89,16 @@ INSERT INTO hobbie VALUES
 (3, 'Passear na feirinha', 'Passear na feirinha, geralmente ocorre a noite, pois as feirinhas só abrem a noite, onde as pessoas saem para passear'),
 (4, 'Jogar vôlei ou futevôlei', 'Jogar vôlei ou futevôlei, é muito comum em praias de ubatuba, onde muitas praias possuem quadras de areia para este tipo de atividade');
 
+INSERT INTO faixa_etaria VALUES
+(1, 'Entre 18 e 25 anos'),
+(2, 'Entre 26 e 35 anos'),
+(3, 'Entre 36 e 45 anos'),
+(4, 'Entre 46 e 55 anos'),
+(5, 'Entre 56 e 65 anos'),
+(6, 'Entre 66 e 75 anos'),
+(7, 'Entre 76 e 85 anos'),
+(8, 'Entre 86 e 95 anos');
+
 SELECT 
 	usuario_praia.idUsuario,
     usuario_praia.idPraia,
@@ -90,3 +108,60 @@ FROM usuario_praia
 JOIN usuario
 	ON usuario.id = usuario_praia.idUsuario
 ORDER BY usuario_praia.idUsuario ASC;
+
+-- SELECTS KPI´s	
+SELECT 
+	COUNT(usuario.fkFaixaEtaria) AS idade,
+    faixa_etaria.nome
+FROM usuario JOIN faixa_etaria
+	ON usuario.fkFaixaEtaria = faixa_etaria.id
+GROUP BY fkFaixaEtaria
+ORDER BY idade DESC
+LIMIT 1;
+
+	
+SELECT 
+	COUNT(idPraia) AS praia,
+    praia.nome
+FROM usuario_praia JOIN praia
+	ON usuario_praia.idPraia = praia.id
+GROUP BY idPraia
+ORDER BY praia DESC
+LIMIT 1;
+
+SELECT 
+	COUNT(usuario.fkEvento) AS evento, 
+    evento.nome
+FROM usuario JOIN evento
+	ON usuario.fkEvento = evento.id
+GROUP BY fkEvento
+ORDER BY evento DESC
+LIMIT 1;
+
+SELECT 
+	COUNT(usuario.fkHobbie) AS hobbie, 
+    hobbie.nome
+FROM usuario JOIN hobbie
+	ON usuario.fkHobbie = hobbie.id
+GROUP BY fkHobbie
+ORDER BY hobbie DESC
+LIMIT 1;
+
+-- SELECTS GRÁFICOS
+
+SELECT 
+    COUNT(*) AS total
+FROM usuario_praia 
+JOIN praia 
+	ON praia.id = usuario_praia.idPraia
+GROUP BY praia.id
+ORDER BY praia.id ASC;
+
+
+SELECT 
+    COUNT(*) AS total
+FROM usuario 
+JOIN evento
+	ON evento.id = usuario.fkEvento
+GROUP BY evento.id
+ORDER BY evento.id ASC;	
