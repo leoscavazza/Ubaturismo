@@ -20,7 +20,9 @@
         <div>
             <img src="assets/imgs/icone_correto.png" alt="ícone correto">
         </div>
-        <div id="mensagem">Cadastro realizado com sucesso!<br> Redirecionando para tela de Login...</div>
+        <div id="mensagem">
+            Cadastro realizado com sucesso!<br> Redirecionando para tela de Login...
+        </div>
     </div>
 
     <div class="conteudo">
@@ -28,7 +30,9 @@
             <a href="index.html">
                 <img onclick="" src="assets/imgs/icone_voltar_login.png" alt="botão de voltar">
             </a>
-            <a id="botao_cadastro" href="cadastro.html">Cadastro</a>
+            <a id="botao_cadastro" href="cadastro.html">
+                Cadastro
+            </a>
         </div>
 
         <div class="container">
@@ -66,18 +70,18 @@
 <script>
     var contador_botao = 0;
     function verSenha() {
-    var input_senha = document.getElementById("senha_input");
-    var botao_ver_senha = document.getElementById("botao_ver_senha");
+        var input_senha = document.getElementById("senha_input");
+        var botao_ver_senha = document.getElementById("botao_ver_senha");
 
-    if (contador_botao % 2 == 0) {
-        input_senha.type = "text";
-        botao_ver_senha.innerHTML = `<img src="assets/imgs/voltar_senha_login.png" alt="botão voltar senha">`;
-    } else {
-        input_senha.type = "password";
-        botao_ver_senha.innerHTML = `<img src="assets/imgs/ver_senha_login.png" alt="botão ver senha">`;
-    }
+        if (contador_botao % 2 == 0) {
+            input_senha.type = "text";
+            botao_ver_senha.innerHTML = `<img src="assets/imgs/voltar_senha_login.png" alt="botão voltar senha">`;
+        } else {
+            input_senha.type = "password";
+            botao_ver_senha.innerHTML = `<img src="assets/imgs/ver_senha_login.png" alt="botão ver senha">`;
+        }
 
-    contador_botao++
+        contador_botao++
     }
 </script>
 

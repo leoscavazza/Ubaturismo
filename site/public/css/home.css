@@ -209,6 +209,7 @@ body {
 .conteudo_praia {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #texto_praia {
@@ -238,7 +239,6 @@ body {
   font-weight: 500;
   color: #c8cfc4;
 }
-
 
 .container_simule {
   display: flex;
